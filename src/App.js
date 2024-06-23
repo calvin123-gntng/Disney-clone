@@ -6,11 +6,15 @@ import { Login, Header, Home, Detail } from "./components";
 const App = () => {
   return (
     <Router>
-      <Header />  // Header component is always displayed
+      {/* Header component is always displayed */}
+      <Header />
       <Routes>
-        <Route path="/" element={<Login />} />  // Login route
-        <Route path="/home" element={<Home />} />  // Home route
-        <Route path="/detail/:id" element={<Detail />} />  // Detail route for specific items
+        {/* Login route */}
+        <Route path="/" element={<Login />} />
+        {/* Home route */}
+        <Route path="/home" element={<Home />} />
+        {/* Detail route for specific items */}
+        <Route path="/detail/:id" element={<Detail />} />
       </Routes>
     </Router>
   );
