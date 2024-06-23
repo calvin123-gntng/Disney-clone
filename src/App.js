@@ -1,19 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import { Login, Header, Home, Detail } from "./components";
 
-// App
+// App component that sets up routing
 const App = () => {
   return (
     <Router>
-      {/* Header */}
-      <Header />
-      {/* Routes */}
+      <Header />  // Header component is always displayed
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/" element={<Login />} />  // Login route
+        <Route path="/home" element={<Home />} />  // Home route
+        <Route path="/detail/:id" element={<Detail />} />  // Detail route for specific items
       </Routes>
     </Router>
   );

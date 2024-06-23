@@ -43,12 +43,12 @@ const Home = () => {
         switch (doc.data().type) {
           case "recommend":
             // eslint-disable-next-line react-hooks/exhaustive-deps
-            recommends = [...recommends, { id: doc.id, ...doc.data() }];
+            Recommends = [...recommends, { id: doc.id, ...doc.data() }];
             break;
 
           case "new":
             // eslint-disable-next-line react-hooks/exhaustive-deps
-            newDisneys = [...newDisneys, { id: doc.id, ...doc.data() }];
+            newDisneys= [...newDisneys, { id: doc.id, ...doc.data() }];
             break;
 
           case "original":
@@ -69,8 +69,8 @@ const Home = () => {
       dispatch(
         setMovies({
           recommend: recommends,
-          newDisney: newDisneys,
-          original: originals,
+          new: newDisneys,
+          original: originals ,
           trending: trending,
         })
       );
